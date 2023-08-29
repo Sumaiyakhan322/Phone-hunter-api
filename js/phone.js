@@ -35,14 +35,19 @@ const displayPhones = (data) => {
                     </div> `;
     card.appendChild(div);
   });
+  //hide spinner
+  toggoltLoading()
 };
 
 //search button
 const handleSearch=()=>{
+   toggoltLoading(true)
    const input=document.getElementById('input-value');
    const inputValue=input.value;
    console.log(inputValue);
-   loadData(inputValue)
+   loadData(inputValue);
+   
+   
 
 }
 //seach btn-2
@@ -51,4 +56,16 @@ const handleSearch2=()=>{
    const inputValue=input.value;
    loadData(inputValue)
 }
+
+const toggoltLoading=(isLoading)=>{
+   const loadingSpinner=document.getElementById('loading-spinner');
+   if(isLoading){
+      loadingSpinner.classList.remove('hidden');
+   }
+   else{
+      loadingSpinner.classList.add('hidden');
+   }
+}
+
 // loadData();
+
