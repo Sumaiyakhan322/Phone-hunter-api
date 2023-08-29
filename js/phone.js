@@ -8,7 +8,17 @@ const displayPhones = (data) => {
   const card = document.getElementById("phone-con");
   //clear con
   card.textContent='';
+  //show all
+  const shoeAll=document.getElementById('show-all-container');
+  if(data.length>12){
+   shoeAll.classList.remove('hidden');
 
+  }
+  else{
+   shoeAll.classList.add('hidden')
+  }
+  //display only 10 items
+  data=data.slice(0,12)
   data.forEach((phone) => {
     console.log(phone);
     const div = document.createElement("div");
