@@ -35,4 +35,10 @@ const handleSearch=()=>{
    loadData(inputValue)
 
 }
+//seach btn-2
+const handleSearch2=()=>{
+   const input=document.getElementById('input-value2');
+   const inputValue=input.value;
+   loadData(inputValue)
+}
 // loadData();
